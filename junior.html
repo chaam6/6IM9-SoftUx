@@ -47,7 +47,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Logis</h1>
+        <h1>Evento</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -135,6 +135,14 @@
                       alert('Debido a la alta demanda de este evento, serás asignado a un sorteo para poder comprar los boletos deseados. Revisa tu correo para mas informacion');
                     }
                     </script>
+
+                  <button type="submit" onclick="mostrarAlerta()">Dar de baja</button>
+                  <script>
+                    function mostrarAlerta() {
+                    var seleccionada = document.getElementById('opciones').value;
+                    alert('Evento dado de baja');
+                    }
+                  </script>
                 </div>
 
               </div>
