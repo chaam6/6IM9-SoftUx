@@ -88,7 +88,10 @@
       </div>
       <nav>
         <div class="container">
-    
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Contact</li>
+          </ol>
         </div>
       </nav>
     </div><!-- End Breadcrumbs -->
@@ -137,55 +140,131 @@
               </div>
             </div><!-- End Info Item -->
           </div><!-- End Información -->
-
-          <!-- Segundo formulario (inicialmente oculto) -->
-          <div class="col-lg-4" id="next-form-container" style="display: none;">
-            <form action="#" method="post" role="form" class="php-email-form form2">
-              <!-- Contenido del segundo formulario -->
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo electrónico" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="Numero de Fan-ID" class="form-control" name="Numero de Fan-ID" id="numfanid" placeholder="Numero de Fan-ID" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Numero de telefono" required>
-                </div>
-              </div>
-              <div class="text-center"><button type="submit">Validar</button></div>
-            </form>
-          </div><!-- End Segundo Formulario -->
-        </div>
+<!-- Segundo formulario (inicialmente oculto) -->
+<div class="col-lg-4" id="next-form-container" style="display: none;">
+  <form action="#" method="post" role="form" class="php-email-form form2">
+    <!-- Contenido del segundo formulario -->
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
       </div>
-    </section><!-- End Contact Section -->
+      <div class="col-md-6 form-group">
+        <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo electrónico" required>
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" class="form-control" name="fan-id" id="fan-id" placeholder="Número de Fan-ID" required>
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Número de teléfono" required>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>Escanea tu QR</p>
+      <p>Utiliza el escáner de QR para validar tus boletos de forma rápida y sencilla.</p>
+      <!-- Botón para abrir la cámara -->
+      <button type="button" id="openCameraBtn">Abrir Cámara</button>
+      <button type="submit">Validar</button>
+    </div>
+  </form>
+  <!-- Contenedor para la vista previa de la cámara -->
+  <div id="cameraPreview" style="display: none;">
+    <video id="videoElement" autoplay></video>
+  </div>
+</div><!-- End Segundo Formulario -->
+
+<!-- Script para manejar la apertura de la cámara -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const openCameraBtn = document.getElementById('openCameraBtn');
+    const cameraPreview = document.getElementById('cameraPreview');
+    const videoElement = document.getElementById('videoElement');
+
+    openCameraBtn.addEventListener('click', function() {
+      // Pide acceso a la cámara
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          // Muestra la vista previa de la cámara
+          videoElement.srcObject = stream;
+          // Muestra el contenedor de la vista previa de la cámara
+          cameraPreview.style.display = 'block';
+        })
+        .catch(function(err) {
+          console.error('Error al acceder a la cámara: ', err);
+        });
+    });
+  });
+</script>
+
 
     <!-- Notificaciones -->
     <div id="notification1" class="alert alert-success" style="display: none;">Puedes continuar con la siguiente validación.</div>
     <div id="notification2" class="alert alert-success" style="display: none;">Boleto y Fan ID validados. ¡Bienvenido!</div>
   </main><!-- End #main -->
- <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span>Aviso</span>
+            <span>Logis</span>
           </a>
-          <p>Mi Movilidad no se hace responsable en caso de compra de boletos a revendedores.</p>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
-                <a href="https://www.instagram.com/mimovilidad_mx?igsh=empqc3ByZWhvem50" class="instagram"><i class="bi bi-instagram"></i></a>
-    
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
         </div>
       </div>
     </div>
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
   </footer><!-- End Footer -->
-  <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -242,3 +321,4 @@
 </body>
 
 </html>
+
