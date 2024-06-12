@@ -100,7 +100,7 @@
       </nav>
     </div><!-- End Breadcrumbs -->
   <div class="master-container">
-  <form>
+
     <div class="card cart">
       <label class="title">Your cart</label>
       <div class="products">
@@ -113,7 +113,7 @@
           </div>
           <div>
             <label for="password_field" class="input_label">Fan ID</label>
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
+            <input id="password_field" value="00000" class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
           </div>
           <label class="price small">$3000</label>
         </div>
@@ -129,7 +129,7 @@
           </div>
           <div>
             <label for="password_field" class="input_label">Fan ID</label>
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
+            <input id="password_field" value="00000"class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
           </div>
           <label class="price small">$3000</label>
         </div>
@@ -145,7 +145,7 @@
           </div>
           <div>
             <label for="password_field" class="input_label">Fan ID</label>
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
+            <input id="password_field" value="00000" class="input_field" type="number" name="cvv" title="CVV" placeholder="0000">
           </div>
           <label class="price small">$3000</label>
         </div>
@@ -171,17 +171,17 @@
         <div class="credit-card-info--form">
           <div class="input_container">
             <label for="password_field" class="input_label">Nombre del titular</label>
-            <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Nombre Completo">
+            <input id="password_field" value="Daniela Montaño Sánchez"class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Nombre Completo">
           </div>
           <div class="input_container">
             <label for="password_field" class="input_label">Número de tarjeta</label>
-            <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+            <input id="password_field"  value="00221" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
           </div>
           <div class="input_container">
             <label for="password_field" class="input_label">Fecha de vencimiento / CVV</label>
             <div class="split">
-            <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
+            <input id="password_field" value="12/12" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
+            <input id="password_field" value="00221" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
           </div>
           </div>
         </div>
@@ -191,74 +191,28 @@
       <div class="card checkout">
         <div class="checkout--footer">
           <label class="price"><sup>$</sup>9,000</label>
-          <button class="checkout-btn" onclick="alerta()">Checkout</button>
+          <button class="button" onclick="ola()">Checkout</button>
+               
         </div>
       </div>
     </div>
-  </form>
+ 
   </div>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
+
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
+            <span>Aviso</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Mi Movilidad no se hace responsable en caso de compra de boletos a revendedores.</p>
           <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/mimovilidad_mx?igsh=empqc3ByZWhvem50" class="instagram"><i class="bi bi-instagram"></i></a>
+    
           </div>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
-            United States <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -277,13 +231,14 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script>
-    function alerta(){
-      alert("Compra Exitosa");
-      window.location.href = 'home.html';
+    function ola() {
+      alert('Compra Exitosa');
+      location.href = 'index.html';
     }
-  </script>
+    </script>
+  <script src="assets/js/main.js"></script>
+  
   
 </body>
 </html>

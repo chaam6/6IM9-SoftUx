@@ -2129,13 +2129,13 @@ section {
 }
 
 .checkout .checkout-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: block;
+  margin: auto;
   align-items: center;
+  justify-content: center;
   width: 150px;
   height: 36px;
-  background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+  background: linear-gradient(180deg, #0f1b36 0%, #21386a 50%, #627db6 100%);
   box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
   border-radius: 7px;
   border: 0;
@@ -2289,6 +2289,71 @@ section {
 .input_field[type=number] {
   -moz-appearance: textfield;
 }
-a {
+.liga{
   text-decoration: none;
+  color: white;
+}
+.button {
+  position: relative;
+  display: block;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px 20px;
+  background-color: #212121;
+  border: none;
+  font: inherit;
+  color: #e8e8e8;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 15px;
+  cursor: not-allowed;
+  overflow: hidden;
+  transition: all 0.3s ease cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+
+.button svg {
+  width: 32px;
+  height: 32px;
+  fill: #F53844;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover {
+  animation: shake 0.2s linear 1;
+}
+
+.button:hover::before {
+  translate: 0 0;
+}
+
+.button:hover svg {
+  fill: #e8e8e8;
+}
+
+@keyframes shake {
+  0% {
+    rotate: 0deg;
+  }
+
+  33% {
+    rotate: 10deg;
+  }
+
+  66% {
+    rotate: -10deg;
+  }
+
+  100% {
+    rotate: 10deg;
+  }
 }
