@@ -41,18 +41,6 @@
       margin: 0 auto;
       display: block;
     }
-    #activate-ticket-btn {
-      display: none;
-      margin-top: 20px;
-    }
-    #id {
-      display: none;
-      margin-top: 20px;
-    }
-    #mensaje {
-      display: none;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
@@ -96,8 +84,8 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Activación de Evento</h2>
-              <p>Para activar tu boleto, el evento se necesita activar previamente.</p>
+              <h2>Activación de Boleto</h2>
+              <p>Para activar tu boleto, necesitas estar a 20 metros de la entrada y a menos de 2 horas del evento.</p>
             </div>
           </div>
         </div>
@@ -106,7 +94,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Inicio</a></li>
-            <li>Activación de Evento</li>
+            <li>Activación de Boleto</li>
           </ol>
         </div>
       </nav>
@@ -127,7 +115,14 @@
                 <option value="evento2">Lakers vs Warriors</option>
                 <option value="evento3">Mora Tuyo Tour</option>
               </select>
-              <button type="button" onclick="activateEvent()">Activar Evento</button>
+              <br>
+            <br><p id="mensaje">Debes estar a 20 metros de la entrada y a menos de 2 horas del evento para activar tu boleto.</p>
+            <input type="text" id="id" placeholder="ingresa el id">
+            <button id="activate-ticket-btn" type="button" onclick="revealQRCode()">Activar Boleto</button>
+
+            <div id="qr-code">
+              <img id="qr-image" src="https://via.placeholder.com/150" alt="QR Code">
+              <p>Código QR activado || <a href="index.html">Aceptar</a></p>
             </form>
             </div>
           </div>
@@ -166,8 +161,32 @@
 
   <script>
     function activateEvent() {
-      alert('El evento se ha activado correctamente');
-      window.location.href = 'entrada2.html';
+      var selectedEvent = document.getElementById('event-select').value;
+      if (selectedEvent) {
+        document.getElementById('activate-ticket-btn').style.display = 'table-cell';
+        document.getElementById('id').style.display = 'table-cell';
+        document.getElementById('mensaje').style.display = 'block';
+        alert('Evento activado. Ahora puedes activar tu boleto');
+      } else {
+        document.getElementById('message').textContent = 'Por favor, selecciona un evento.';
+      }
+    }
+
+    function revealQRCode() {
+      var currentTime = new Date();
+      var eventTime = new Date(currentTime.getTime() + (1 * 60 * 60 * 1000)); // Set event time 1 hour from now for testing
+      var distance = 15; // Set distance to 15 meters for testing
+
+      if (currentTime >= eventTime) {
+        document.getElementById('mensaje').textContent = 'El evento ya ha comenzado o terminado.';
+      } else if (distance > 20) {
+        document.getElementById('mensaje').textContent = 'Estás demasiado lejos para activar el boleto.';
+      } else {
+        document.getElementById('mensaje').textContent = '';
+        document.getElementById('qr-code').style.display = 'block';
+        document.getElementById('qr-image').src = 'assets/img/entrada.png';
+      }
+      alert('Tu boleto se ha activado correctamente');
     }
   </script>
 </body>

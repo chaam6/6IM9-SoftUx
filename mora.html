@@ -128,21 +128,23 @@
                   </ul>
                 </div>
 
-                  <button type="submit" onclick="mostrarAlerta()">Solicitar Boletos</button>
-                  <script>
-                    function mostrarAlerta() {
-                      var seleccionada = document.getElementById('opciones').value;
-                      alert('Tus boletos han sido asignados a tu carrito');
-                    }
-                    </script>
-
-                  <button type="submit" onclick="mostrarAlerta()">Dar de baja</button>
-                  <script>
-                    function mostrarAlerta() {
+                <button type="submit" onclick="ola()">Solicitar Boletos</button>
+                <script>
+                  function ola() {
                     var seleccionada = document.getElementById('opciones').value;
-                    alert('Evento dado de baja');
-                    }
+                    alert('Debido a la alta demanda de este evento, serás asignado a un sorteo para poder comprar los boletos deseados. Revisa tu correo para mas informacion');
+                    location.href = 'index.html';
+                  }
                   </script>
+
+                <button type="submit" onclick="mostrarAlerta()">Dar de baja</button>
+                <script>
+                  function mostrarAlerta() {
+                  var seleccionada = document.getElementById('opciones').value;
+                  alert('Evento dado de baja');
+                  location.href = 'index.html';
+                  }
+                </script>
 
                 </div>
 

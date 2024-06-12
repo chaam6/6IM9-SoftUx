@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Logis Bootstrap Template - Contact</title>
+  <title>Logis Bootstrap Template - Valida Boleto</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,6 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1>Valida Fan ID</h1>
         <h1>Valida Boleto</h1>
       </a>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -67,7 +66,8 @@
           <li><a href="pricing.html">Comprar</a></li>
           <li><a href="fanid.html">Fan-ID</a></li>
           <li><a href="entrada.html">Entrada</a></li>
-          <li><a href="contact.html">Validacion</a></li> 
+          <li><a href="contact.html">Validar Boletos</a></li> 
+          </li><a href="validafanid.html">Validar Fan ID</a>
         </ul>
       </nav><!-- .navbar -->
     </div>
@@ -80,8 +80,8 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>¡Valida tus Boletos y Fan ID!</h2>
-              <p>En esta sección de la página, con nuestra herramienta de validación, puedes verificar la autenticidad de tus boletos como primer paso crucial. Una vez confirmada la autenticidad de tus boletos, procedemos a validar que los datos de los mismos coincidan con los del Fan ID asociado. Solo cuando este proceso esté completado satisfactoriamente, podrás pasar al evento, asegurando así un acceso fluido y seguro.</p>
+              <h2>¡Valida tus Boletos!</h2>
+              <p>En esta sección de la página, con nuestra herramienta de validación, puedes verificar la autenticidad de tus boletos como primer paso crucial. </p>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
+            <li>Validar Boletos</li>
           </ol>
         </div>
       </nav>
@@ -140,65 +140,10 @@
               </div>
             </div><!-- End Info Item -->
           </div><!-- End Información -->
-<!-- Segundo formulario (inicialmente oculto) -->
-<div class="col-lg-4" id="next-form-container" style="display: none;">
-  <form action="#" method="post" role="form" class="php-email-form form2">
-    <!-- Contenido del segundo formulario -->
-    <div class="row">
-      <div class="col-md-6 form-group">
-        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
-      </div>
-      <div class="col-md-6 form-group">
-        <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo electrónico" required>
-      </div>
-      <div class="col-md-6 form-group">
-        <input type="text" class="form-control" name="fan-id" id="fan-id" placeholder="Número de Fan-ID" required>
-      </div>
-      <div class="col-md-6 form-group">
-        <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Número de teléfono" required>
-      </div>
-    </div>
-    <div class="text-center">
-      <p>Escanea tu QR</p>
-      <p>Utiliza el escáner de QR para validar tus boletos de forma rápida y sencilla.</p>
-      <!-- Botón para abrir la cámara -->
-      <button type="button" id="openCameraBtn">Abrir Cámara</button>
-      <button type="submit">Validar</button>
-    </div>
-  </form>
-  <!-- Contenedor para la vista previa de la cámara -->
-  <div id="cameraPreview" style="display: none;">
-    <video id="videoElement" autoplay></video>
-  </div>
-</div><!-- End Segundo Formulario -->
-
-<!-- Script para manejar la apertura de la cámara -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const openCameraBtn = document.getElementById('openCameraBtn');
-    const cameraPreview = document.getElementById('cameraPreview');
-    const videoElement = document.getElementById('videoElement');
-
-    openCameraBtn.addEventListener('click', function() {
-      // Pide acceso a la cámara
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-          // Muestra la vista previa de la cámara
-          videoElement.srcObject = stream;
-          // Muestra el contenedor de la vista previa de la cámara
-          cameraPreview.style.display = 'block';
-        })
-        .catch(function(err) {
-          console.error('Error al acceder a la cámara: ', err);
-        });
-    });
-  });
-</script>
 
 
     <!-- Notificaciones -->
     <div id="notification1" class="alert alert-success" style="display: none;">Puedes continuar con la siguiente validación.</div>
-    <div id="notification2" class="alert alert-success" style="display: none;">Boleto y Fan ID validados. ¡Bienvenido!</div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
